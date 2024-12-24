@@ -1,16 +1,17 @@
+
 volumes:
   nextcloud:
     driver: local
     driver_opts:
       type: none
-      device: /dev/zfs/nextcloud
+      device: /mnt/sdb1/nextcloud
       o: bind
     
   db:
-      driver: local
+    driver: local
     driver_opts:
       type: none
-      device: /dev/zfs/mysql
+      device: /mnt/sdb1/mysql
       o: bind
 
 services:
